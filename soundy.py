@@ -41,7 +41,7 @@ def on_press(key):
         sound_file = random.choice(keysounds)
         play_sound(sound_file)
 
-if __name__ == __main__:
+if __name__ == "__main__":
     # Start the global keyboard listener
     print("Keyboard sound simulator running... Press Ctrl+C to stop.")
     with keyboard.Listener(on_press=on_press) as listener:
