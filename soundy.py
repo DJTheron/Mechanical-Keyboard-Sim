@@ -38,11 +38,11 @@ def on_press(key):
         play_sound(specialkeysounds["cmd"])   
 
     else:
-        sound_file = random.choice([x for x in sounds if x not in (sounds[0], sounds[1], sounds[2])])
+        sound_file = random.choice(keysounds)
         play_sound(sound_file)
 
-
-# Start the global keyboard listener
-print("Keyboard sound simulator running... Press Ctrl+C to stop.")
-with keyboard.Listener(on_press=on_press) as listener:
-    listener.join()
+if __name__ == __main__:
+    # Start the global keyboard listener
+    print("Keyboard sound simulator running... Press Ctrl+C to stop.")
+    with keyboard.Listener(on_press=on_press) as listener:
+        listener.join()
