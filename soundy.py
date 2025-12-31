@@ -6,7 +6,7 @@ import random
 keysounds = ["key1.m4a", "key2.m4a", "key3.m4a", "key4.m4a", "key5.m4a", "key6.m4a", 
           "key7.m4a", "key8.m4a", "key9.m4a", "key10.m4a", "key11.m4a", "key12.m4a"]
 
-specialkeysounds = {"enter":"enter.m4a","space":"space.m4a,"cmd":"cmd.m4a"}
+specialkeysounds = {"enter":"enter.m4a", "space":"space.m4a", "cmd":"cmd.m4a"}
 
 def play_sound(file):
     # Resolve to an absolute path to avoid cwd issues
