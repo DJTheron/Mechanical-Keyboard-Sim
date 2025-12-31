@@ -34,7 +34,7 @@ def on_press(key):
     elif key_pressed == "space":
         play_sound(specialkeysounds["space"])
 
-    elif key_pressed == "cmd":
+    elif key_pressed == "cmd" or "cmd_l" or "cmd_r":
         play_sound(specialkeysounds["cmd"])   
 
     else:
