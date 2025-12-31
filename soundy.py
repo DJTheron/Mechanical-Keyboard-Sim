@@ -1,11 +1,12 @@
 import os
 import subprocess
-import threading
 from pynput import keyboard
 import random
 
-sounds = ["enter.m4a", "space.m4a", "cmd.m4a", "key1.m4a", "key2.m4a", "key3.m4a", "key4.m4a", "key5.m4a", "key6.m4a", 
+keysounds = ["key1.m4a", "key2.m4a", "key3.m4a", "key4.m4a", "key5.m4a", "key6.m4a", 
           "key7.m4a", "key8.m4a", "key9.m4a", "key10.m4a", "key11.m4a", "key12.m4a"]
+
+specialkeysounds = {"enter":"enter.m4a","space":"space.m4a,"cmd":"cmd.m4a"}
 
 def play_sound(file):
     # Resolve to an absolute path to avoid cwd issues
@@ -28,7 +29,7 @@ def on_press(key):
         key_pressed = key.name  # For special keys (shift, ctrl, etc.)
     
     if key_pressed == "enter":
-        play_sound(sounds[0])
+        play_sound(specialkeysounds["enter"])
 
     elif key_pressed == "space":
         play_sound(sounds[1])
