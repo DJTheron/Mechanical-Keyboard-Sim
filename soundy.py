@@ -37,8 +37,7 @@ def on_press(key):
         play_sound("enter.m4a")   
 
     else:
-
-        sound_file = random.choice(sounds)
+        sound_file = random.choice([x for x in sounds if x != "space.m4a"])
         play_sound(sound_file)
 
 
