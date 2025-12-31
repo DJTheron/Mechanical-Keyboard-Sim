@@ -32,10 +32,10 @@ def on_press(key):
         play_sound(specialkeysounds["enter"])
 
     elif key_pressed == "space":
-        play_sound(sounds[1])
+        play_sound(specialkeysounds["space"])
 
     elif key_pressed == "cmd":
-        play_sound(sounds[2])   
+        play_sound(specialkeysounds["cmd"])   
 
     else:
         sound_file = random.choice([x for x in sounds if x not in (sounds[0], sounds[1], sounds[2])])
