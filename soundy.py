@@ -37,7 +37,7 @@ def on_press(key):
         play_sound(sounds[2])   
 
     else:
-        sound_file = random.choice([x for x in sounds if x != sounds[0], sounds[1], sounds[2])
+        sound_file = random.choice([x for x in sounds if x not in (sounds[0], sounds[1], sounds[2])])
         play_sound(sound_file)
 
 
